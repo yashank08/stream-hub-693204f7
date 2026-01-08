@@ -12,7 +12,7 @@ export const Footer = () => {
               <div className="w-10 h-10 rounded-lg bg-primary flex items-center justify-center">
                 <span className="text-primary-foreground font-bold text-xl">H</span>
               </div>
-              <span className="text-xl font-bold text-foreground">Hotstar</span>
+              <span className="text-xl font-bold text-foreground">Cine2flow</span>
             </Link>
             <p className="text-muted-foreground text-sm mb-4">
               Stream your favorite movies, TV shows, and sports live.
