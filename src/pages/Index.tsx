@@ -14,8 +14,8 @@ const Index = () => {
   return (
     <>
       <Helmet>
-        <title>Hotstar - Watch Movies, TV Shows, Sports Online</title>
-        <meta name="description" content="Stream the latest movies, TV shows, and live sports on Hotstar. Enjoy unlimited entertainment with premium content." />
+        <title>Cine2Flow - Watch Movies, TV Shows, Sports Online</title>
+        <meta name="description" content="Stream the latest movies, TV shows, and live sports on Cine2Flow. Enjoy unlimited entertainment with premium content." />
       </Helmet>
       
       <Layout>
