@@ -48,9 +48,9 @@ export const Header = () => {
           {/* Logo */}
           <Link to="/" className="flex items-center gap-2 group">
             <div className="w-10 h-10 rounded-lg bg-primary flex items-center justify-center group-hover:shadow-[0_0_20px_hsl(var(--primary)/0.5)] transition-shadow duration-300">
-              <span className="text-primary-foreground font-bold text-xl">H</span>
+              <span className="text-primary-foreground font-bold text-xl">C</span>
             </div>
-            <span className="text-xl font-bold text-foreground hidden sm:block">Hotstar</span>
+            <span className="text-xl font-bold text-foreground hidden sm:block">Cine2Flow</span>
           </Link>
 
           {/* Desktop Navigation */}
