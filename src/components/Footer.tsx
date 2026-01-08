@@ -10,7 +10,7 @@ export const Footer = () => {
           <div className="col-span-2 md:col-span-1">
             <Link to="/" className="flex items-center gap-2 mb-4">
               <div className="w-10 h-10 rounded-lg bg-primary flex items-center justify-center">
-                <span className="text-primary-foreground font-bold text-xl">H</span>
+                <span className="text-primary-foreground font-bold text-xl">C</span>
               </div>
               <span className="text-xl font-bold text-foreground">Cine2flow</span>
             </Link>
