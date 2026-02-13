@@ -45,7 +45,7 @@ const Auth = () => {
   return (
     <>
       <Helmet>
-        <title>{isLogin ? 'Login' : 'Sign Up'} - Hotstar</title>
+        <title>{isLogin ? 'Login' : 'Sign Up'} - Cine2Flow</title>
         <meta name="description" content="Login or create an account to access exclusive content on Hotstar." />
       </Helmet>
 
@@ -67,7 +67,7 @@ const Auth = () => {
               <div className="w-12 h-12 rounded-xl bg-primary flex items-center justify-center shadow-lg">
                 <span className="text-primary-foreground font-bold text-2xl">H</span>
               </div>
-              <span className="text-2xl font-bold text-foreground">Hotstar</span>
+              <span className="text-2xl font-bold text-foreground">Cine2Flow</span>
             </div>
 
             {/* Title */}
