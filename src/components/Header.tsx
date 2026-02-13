@@ -3,6 +3,7 @@ import { Link, useLocation, useNavigate } from 'react-router-dom';
 import { Search, User, Menu, X, Crown } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { cn } from '@/lib/utils';
+import { PricingModal } from '@/components/PricingModal';
 
 const navLinks = [
   { label: 'Home', path: '/' },
@@ -17,6 +18,7 @@ export const Header = () => {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const [searchQuery, setSearchQuery] = useState('');
   const [isSearchOpen, setIsSearchOpen] = useState(false);
+  const [isPricingOpen, setIsPricingOpen] = useState(false);
   const location = useLocation();
   const navigate = useNavigate();
 
@@ -108,7 +110,7 @@ export const Header = () => {
             </div>
 
             {/* Subscribe Button */}
-            <Button variant="premium" size="sm" className="hidden md:flex items-center gap-2">
+            <Button variant="premium" size="sm" className="hidden md:flex items-center gap-2" onClick={() => setIsPricingOpen(true)}>
               <Crown className="w-4 h-4" />
               Subscribe
             </Button>
@@ -153,7 +155,7 @@ export const Header = () => {
                 </Link>
               ))}
               <div className="flex gap-2 mt-4 px-4">
-                <Button variant="premium" className="flex-1">
+                <Button variant="premium" className="flex-1" onClick={() => setIsPricingOpen(true)}>
                   <Crown className="w-4 h-4 mr-2" />
                   Subscribe
                 </Button>
@@ -168,6 +170,7 @@ export const Header = () => {
           </div>
         )}
       </div>
+      <PricingModal open={isPricingOpen} onOpenChange={setIsPricingOpen} />
     </header>
   );
 };
