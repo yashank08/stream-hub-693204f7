@@ -65,7 +65,7 @@ const Auth = () => {
             {/* Logo */}
             <div className="flex items-center gap-3 mb-8">
               <div className="w-12 h-12 rounded-xl bg-primary flex items-center justify-center shadow-lg">
-                <span className="text-primary-foreground font-bold text-2xl">H</span>
+                <span className="text-primary-foreground font-bold text-2xl">C</span>
               </div>
               <span className="text-2xl font-bold text-foreground">Cine2Flow</span>
             </div>
