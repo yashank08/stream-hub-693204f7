@@ -6,7 +6,7 @@ export const mockContent: Content[] = [
     id: '1',
     title: 'The Dark Knight',
     description: 'When the menace known as the Joker wreaks havoc and chaos on the people of Gotham, Batman must accept one of the greatest psychological and physical tests of his ability to fight injustice.',
-    thumbnail: 'https://images.unsplash.com/photo-1509347528160-9a9e33742cdb?w=400&h=600&fit=crop',
+    thumbnail: 'C:\Users\Dell\OneDrive\Desktop\81IfoBox2TL.jpg',
     banner: 'https://images.unsplash.com/photo-1509347528160-9a9e33742cdb?w=1920&h=1080&fit=crop',
     category: 'movies',
     genre: ['Action', 'Crime', 'Drama'],
