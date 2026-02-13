@@ -45,7 +45,7 @@ export const mockContent: Content[] = [
     id: '4',
     title: 'Avatar',
     description: 'A paraplegic Marine dispatched to the moon Pandora on a unique mission becomes torn between following his orders and protecting the world he feels is his home.',
-    thumbnail: 'https://images.unsplash.com/photo-1534447677768-be436bb09401?w=400&h=600&fit=crop',
+    thumbnail: 'https://cdn.dribbble.com/userupload/6158891/file/original-dba5dfaf6b04c7aa584921d7cd42e109.jpg?resize=752x&vertical=center',
     category: 'movies',
     genre: ['Action', 'Adventure', 'Fantasy'],
     year: 2009,
