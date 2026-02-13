@@ -70,7 +70,7 @@ export const mockContent: Content[] = [
     id: '6',
     title: 'Breaking Bad',
     description: 'A high school chemistry teacher diagnosed with inoperable lung cancer turns to manufacturing and selling methamphetamine in order to secure his family\'s future.',
-    thumbnail: 'https://images.unsplash.com/photo-1504270997636-07ddfbd48945?w=400&h=600&fit=crop',
+    thumbnail: 'https://m.media-amazon.com/images/I/91+GrGr5TWL._AC_UF894,1000_QL80_.jpg',
     category: 'series',
     genre: ['Crime', 'Drama', 'Thriller'],
     year: 2008,
