@@ -119,7 +119,7 @@ export const mockContent: Content[] = [
     id: '10',
     title: 'IPL Cricket',
     description: 'The biggest cricket league in the world - Indian Premier League.',
-    thumbnail: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ6KYW4Ii3DwQivGJ-g0pjB0FDaE8Qkby_KKQ&s',
+    thumbnail: 'https://i.pinimg.com/564x/f2/44/ae/f244aef51c9888440791edd302759a8d.jpg',
     category: 'sports',
     genre: ['Cricket', 'Live'],
     year: 2025,
