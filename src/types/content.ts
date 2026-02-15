@@ -9,6 +9,7 @@ export interface Content {
   year: number;
   rating: string;
   duration: string;
+  language: string;
   isPremium: boolean;
   videoUrl?: string;
   episodes?: Episode[];
