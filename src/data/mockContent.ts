@@ -13,6 +13,7 @@ export const mockContent: Content[] = [
     year: 2008,
     rating: 'PG-13',
     duration: '2h 32m',
+    language: 'English',
     isPremium: true,
   },
   {
@@ -26,6 +27,7 @@ export const mockContent: Content[] = [
     year: 2010,
     rating: 'PG-13',
     duration: '2h 28m',
+    language: 'English',
     isPremium: false,
   },
   {
@@ -39,6 +41,7 @@ export const mockContent: Content[] = [
     year: 2014,
     rating: 'PG-13',
     duration: '2h 49m',
+    language: 'English',
     isPremium: true,
   },
   {
@@ -51,6 +54,7 @@ export const mockContent: Content[] = [
     year: 2009,
     rating: 'PG-13',
     duration: '2h 42m',
+    language: 'Hindi',
     isPremium: false,
   },
   {
@@ -63,6 +67,7 @@ export const mockContent: Content[] = [
     year: 1999,
     rating: 'R',
     duration: '2h 16m',
+    language: 'English',
     isPremium: true,
   },
   // Series
@@ -76,6 +81,7 @@ export const mockContent: Content[] = [
     year: 2008,
     rating: 'TV-MA',
     duration: '5 Seasons',
+    language: 'English',
     isPremium: true,
   },
   {
@@ -88,6 +94,7 @@ export const mockContent: Content[] = [
     year: 2016,
     rating: 'TV-14',
     duration: '4 Seasons',
+    language: 'English',
     isPremium: false,
   },
   {
@@ -100,6 +107,7 @@ export const mockContent: Content[] = [
     year: 2011,
     rating: 'TV-MA',
     duration: '8 Seasons',
+    language: 'English',
     isPremium: true,
   },
   // Sports
@@ -113,6 +121,7 @@ export const mockContent: Content[] = [
     year: 2025,
     rating: 'All Ages',
     duration: 'Live',
+    language: 'English',
     isPremium: true,
   },
   {
@@ -125,6 +134,7 @@ export const mockContent: Content[] = [
     year: 2025,
     rating: 'All Ages',
     duration: 'Live',
+    language: 'Hindi',
     isPremium: true,
   },
   {
@@ -137,6 +147,7 @@ export const mockContent: Content[] = [
     year: 2025,
     rating: 'All Ages',
     duration: 'Live',
+    language: 'English',
     isPremium: true,
   },
   // Kids
@@ -150,6 +161,7 @@ export const mockContent: Content[] = [
     year: 2008,
     rating: 'TV-Y7',
     duration: '20 Seasons',
+    language: 'Hindi',
     isPremium: false,
   },
   {
@@ -162,6 +174,7 @@ export const mockContent: Content[] = [
     year: 2012,
     rating: 'TV-Y',
     duration: '10 Seasons',
+    language: 'Hindi',
     isPremium: false,
   },
   {
@@ -174,6 +187,7 @@ export const mockContent: Content[] = [
     year: 1979,
     rating: 'TV-Y',
     duration: '50+ Seasons',
+    language: 'Japanese',
     isPremium: false,
   },
 ];
