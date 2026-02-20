@@ -68,7 +68,37 @@ const plans = [
 export const PricingModal = ({ open, onOpenChange }: PricingModalProps) => {
   const [selectedPlan, setSelectedPlan] = useState<string | null>(null);
   const [isProcessing, setIsProcessing] = useState(false);
+  const [cardName, setCardName] = useState('');
+  const [cardNumber, setCardNumber] = useState('');
+  const [expiry, setExpiry] = useState('');
+  const [cvv, setCvv] = useState('');
   const { toast } = useToast();
+
+  const handleCardNameChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+    // Allow only letters and spaces, auto-uppercase
+    const value = e.target.value.replace(/[^a-zA-Z\s]/g, '').toUpperCase();
+    setCardName(value);
+  };
+
+  const handleCardNumberChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+    // Allow only digits, format as groups of 4
+    const raw = e.target.value.replace(/\D/g, '').slice(0, 16);
+    const formatted = raw.replace(/(.{4})/g, '$1 ').trim();
+    setCardNumber(formatted);
+  };
+
+  const handleExpiryChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+    // Allow only digits, auto-insert slash after MM
+    let raw = e.target.value.replace(/\D/g, '').slice(0, 4);
+    if (raw.length >= 3) raw = raw.slice(0, 2) + '/' + raw.slice(2);
+    setExpiry(raw);
+  };
+
+  const handleCvvChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+    // Allow only digits
+    const raw = e.target.value.replace(/\D/g, '').slice(0, 3);
+    setCvv(raw);
+  };
 
   const handleSubscribe = (planName: string) => {
     if (planName === 'Free') return;
@@ -81,6 +111,10 @@ export const PricingModal = ({ open, onOpenChange }: PricingModalProps) => {
     setTimeout(() => {
       setIsProcessing(false);
       setSelectedPlan(null);
+      setCardName('');
+      setCardNumber('');
+      setExpiry('');
+      setCvv('');
       onOpenChange(false);
       toast({
         title: 'Subscription Activated!',
@@ -90,7 +124,13 @@ export const PricingModal = ({ open, onOpenChange }: PricingModalProps) => {
   };
 
   const handleClose = (value: boolean) => {
-    if (!value) setSelectedPlan(null);
+    if (!value) {
+      setSelectedPlan(null);
+      setCardName('');
+      setCardNumber('');
+      setExpiry('');
+      setCvv('');
+    }
     onOpenChange(value);
   };
 
@@ -179,20 +219,51 @@ export const PricingModal = ({ open, onOpenChange }: PricingModalProps) => {
             <form onSubmit={handlePayment} className="space-y-4">
               <div className="space-y-2">
                 <Label htmlFor="cardName">Name on Card</Label>
-                <Input id="cardName" placeholder="John Doe" required />
+                <Input
+                  id="cardName"
+                  placeholder="JOHN DOE"
+                  value={cardName}
+                  onChange={handleCardNameChange}
+                  required
+                />
               </div>
               <div className="space-y-2">
                 <Label htmlFor="cardNumber">Card Number</Label>
-                <Input id="cardNumber" placeholder="4242 4242 4242 4242" maxLength={19} required />
+                <Input
+                  id="cardNumber"
+                  placeholder="4242 4242 4242 4242"
+                  value={cardNumber}
+                  onChange={handleCardNumberChange}
+                  inputMode="numeric"
+                  maxLength={19}
+                  required
+                />
               </div>
               <div className="grid grid-cols-2 gap-4">
                 <div className="space-y-2">
                   <Label htmlFor="expiry">Expiry</Label>
-                  <Input id="expiry" placeholder="MM/YY" maxLength={5} required />
+                  <Input
+                    id="expiry"
+                    placeholder="MM/YY"
+                    value={expiry}
+                    onChange={handleExpiryChange}
+                    inputMode="numeric"
+                    maxLength={5}
+                    required
+                  />
                 </div>
                 <div className="space-y-2">
                   <Label htmlFor="cvv">CVV</Label>
-                  <Input id="cvv" placeholder="123" maxLength={3} type="password" required />
+                  <Input
+                    id="cvv"
+                    placeholder="123"
+                    value={cvv}
+                    onChange={handleCvvChange}
+                    inputMode="numeric"
+                    maxLength={3}
+                    type="password"
+                    required
+                  />
                 </div>
               </div>
               <Button type="submit" className="w-full" disabled={isProcessing}>
