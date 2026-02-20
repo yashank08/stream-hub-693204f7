@@ -12,7 +12,7 @@ interface CategoryPageProps {
   description: string;
 }
 
-const LANGUAGES = ['All', 'English', 'Hindi', 'Tamil', 'Telugu', 'Japanese', 'Korean'];
+const LANGUAGES = ['All', 'English', 'Hindi', 'Tamil', 'Telugu'];
 
 export const CategoryPage = ({ category, title, description }: CategoryPageProps) => {
   const allContent = getContentByCategory(category);
