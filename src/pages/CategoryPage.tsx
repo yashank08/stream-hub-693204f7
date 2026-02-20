@@ -62,17 +62,6 @@ export const CategoryPage = ({ category, title, description }: CategoryPageProps
               </div>
             </div>
 
-            {/* Filter Tabs */}
-            <div className="flex gap-2 mb-8 overflow-x-auto pb-2">
-              {['All', 'Popular', 'Latest', 'Premium'].map((filter) => (
-                <button
-                  key={filter}
-                  className="px-4 py-2 bg-secondary text-foreground rounded-full text-sm font-medium hover:bg-primary hover:text-primary-foreground transition-colors duration-200 whitespace-nowrap"
-                >
-                  {filter}
-                </button>
-              ))}
-            </div>
 
             {/* Content Grid */}
             <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 xl:grid-cols-6 gap-4 md:gap-6">
